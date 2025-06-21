@@ -1,6 +1,7 @@
+
 import streamlit as st
 from PIL import Image
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 
 # --- Page Config ---
 st.set_page_config(page_title="Naib Althaf | AI/ML Engineer", layout="wide")

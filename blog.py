@@ -12,7 +12,7 @@ with open("malthaf resume.pdf", "rb") as pdf_file:
 
 # --- Sidebar Navigation ---
 with st.sidebar:
-    selected = option_menu(
+    selected = (
         menu_title="Main Menu",
         options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],
         icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],

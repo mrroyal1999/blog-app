@@ -1,7 +1,7 @@
 
 import streamlit as st
 from PIL import Image
-#from streamlit_option_menu import option_menu
+from streamlit_option_menu import option_menu
 
 # --- Page Config ---
 st.set_page_config(page_title="Naib Althaf | AI/ML Engineer", layout="wide")
@@ -12,7 +12,7 @@ with open("malthaf resume.pdf", "rb") as pdf_file:
 
 # --- Sidebar Navigation ---
 with st.sidebar:
-    selected = (menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
+    selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
 # --- Home ---
 if selected == "Home":

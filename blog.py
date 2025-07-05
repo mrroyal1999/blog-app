@@ -25,7 +25,7 @@ if selected == "Home":
         [GitHub](https://github.com/naib1999/my-projects) | [Email](mailto:naibalthaf@gmail.com) | 📞 9704077035
         """
     )
-    st.image("https://images.unsplash.com/photo-1504384308090-c894fdcc538d", caption="AI & Innovation")
+    st.image("IMG_0042s.jpg", caption="AI & Innovation")
     st.markdown("---")
 
 # --- About Me ---

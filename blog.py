@@ -27,10 +27,12 @@ if selected == "Home":
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;  /* <== Moves content up */
-        padding: 2rem 4rem 1rem 4rem;  /* top-right-bottom-left */
-        height: 100vh;
+        align-items: flex-start;      /* keep content up */
+        padding: 3rem 4rem 2rem 4rem; /* top right bottom left */
+        min-height: calc(100vh - 4rem); /* account for top Streamlit padding */
         box-sizing: border-box;
+
+
       
 
         }

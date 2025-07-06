@@ -238,7 +238,7 @@ elif selected == "About Me":
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="https://raw.githubusercontent.com/naib1999/blog-app/main/IMG_0042s.jpg" alt="Profile Image">
+                    <img src="https://github.com/mrroyal1999/blog-app/blob/main/IMG_0042s.jpg" alt="Profile Image">
                 </div>
             </div>
         </div>

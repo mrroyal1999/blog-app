@@ -144,22 +144,89 @@ if selected == "Home":
 
 
 
-# --- About Me ---
 elif selected == "About Me":
-    st.header("🙋‍♂️ About Me")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("""
-            I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains. 
-            With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
+    # --- Full-height layout, wider text, no image ---
+    st.markdown(
+        """
+        <style>
+        html, body, .stApp {
+            height: 100%;
+        }
 
-            Currently working at Tata Consultancy Services, I’ve built chatbots using RAG pipelines, improved workflows, and developed tools 
-            that reduced hours of manual effort. My interest lies in natural language processing, explainable AI, and bridging ML systems 
-            with real business needs.
-        """)
-    with col2:
-        st.image("IMG_0042s.jpg", width=200)
-    st.markdown("---")
+        .about-wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            box-sizing: border-box;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 3rem 3rem 2rem 3rem;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            color: #f0f0f0;
+        }
+
+        .about-container h2 {
+            color: #00e6e6;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-container p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-wrapper {
+                padding: 2rem 1rem;
+            }
+
+            .about-container {
+                padding: 2rem;
+            }
+
+            .about-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-container p {
+                font-size: 1.1rem;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # --- Text Content Layout ---
+    st.markdown(
+        """
+        <div class="about-wrapper">
+            <div class="about-container">
+                <h2>🙋‍♂️ About Me</h2>
+                <p>
+                    I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains.
+                    With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
+                </p>
+                <p>
+                    Currently working at <strong>Tata Consultancy Services</strong>, I’ve built chatbots using <strong>RAG pipelines</strong>, improved workflows, and developed tools 
+                    that reduced hours of manual effort. My interest lies in <strong>Natural Language Processing</strong>, <strong>Explainable AI</strong>, and bridging ML systems 
+                    with real business needs.
+                </p>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 

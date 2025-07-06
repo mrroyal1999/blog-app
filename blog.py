@@ -113,22 +113,86 @@ if selected == "Home":
 
 
 
-# --- About Me ---
 elif selected == "About Me":
-    st.header("🙋‍♂️ About Me")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.write("""
-            I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains. 
-            With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
+    # --- Stylish background and layout for About Me ---
+    st.markdown(
+        """
+        <style>
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            border-radius: 15px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
 
-            Currently working at Tata Consultancy Services, I’ve built chatbots using RAG pipelines, improved workflows, and developed tools 
-            that reduced hours of manual effort. My interest lies in natural language processing, explainable AI, and bridging ML systems 
-            with real business needs.
-        """)
-    with col2:
-        st.image("IMG_0042s.jpg", width=200)
+        .about-text {
+            flex: 2;
+            padding-right: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .about-container h2 {
+            color: #00e6e6;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                padding-right: 0;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # --- About Me Content ---
+    st.markdown(
+        """
+        <div class="about-container">
+            <div class="about-text">
+                <h2>🙋‍♂️ About Me</h2>
+                <p>
+                    I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains.
+                    With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
+                </p>
+                <p>
+                    Currently working at <strong>Tata Consultancy Services</strong>, I’ve built chatbots using <strong>RAG pipelines</strong>, improved workflows, and developed tools 
+                    that reduced hours of manual effort. My interest lies in <strong>Natural Language Processing</strong>, <strong>Explainable AI</strong>, and bridging ML systems 
+                    with real business needs.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="IMG_0042s.jpg" alt="Profile Image">
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.markdown("---")
+
 
 # --- Projects ---
 elif selected == "Projects":

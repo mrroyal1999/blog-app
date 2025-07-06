@@ -157,7 +157,7 @@ elif selected == "About Me":
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 2rem 4rem;
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             box-sizing: border-box;

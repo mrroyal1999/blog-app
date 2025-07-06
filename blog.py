@@ -20,7 +20,7 @@ if selected == "Home":
         """
         <style>
         .stApp {
-            background-image: url("https://unsplash.com/photos/a-persons-head-with-a-circuit-board-in-front-of-it-WhAQMsdRKMI");
+            background-image: url("https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

@@ -15,100 +15,99 @@ with st.sidebar:
     selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
 if selected == "Home":
-    # --- Background, top bar fix, layout ---
     st.markdown(
         """
         <style>
-        /* Push image right for better text visibility */
-        .stApp {
-            background-image: url("https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0");
-            background-size: cover;
-            background-position: 80% center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Segoe UI', sans-serif;
+        .split-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
         }
 
-        /* Remove top black box or shadow */
-        header, footer, .css-18ni7ap.e8zbici2 {
-            visibility: hidden;
+        .left-content {
+            flex: 1;
+            padding: 2rem;
+            color: white;
         }
 
-        /* Overlay for readable text */
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.65);
-            padding: 3rem 4rem;
-            margin: 80px auto;
-            border-radius: 20px;
-            max-width: 850px;
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-content img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
         }
 
         h1 {
             font-size: 3rem;
-            color: #fff !important;
             font-weight: 800;
+            margin-bottom: 0.5rem;
         }
+
         h3 {
             font-size: 1.5rem;
-            color: #ddd !important;
             font-weight: 400;
+            margin-bottom: 1rem;
         }
+
         p {
-            color: #eee !important;
             font-size: 1.1rem;
             line-height: 1.6;
         }
-        .quote {
-            font-style: italic;
-            color: #c0c0c0 !important;
-            margin-top: 1rem;
-        }
-        .contact-links {
-            margin-top: 2rem;
-            font-size: 1rem;
-        }
+
         .contact-links a {
-            color: #ffd700 !important;
-            font-weight: bold;
+            color: #ffd700;
             text-decoration: none;
-            margin: 0 8px;
+            font-weight: bold;
+            margin-right: 1rem;
         }
+
         .contact-links a:hover {
             text-decoration: underline;
+        }
+
+        body {
+            background-color: #0a0a0a;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # --- Home Page Content ---
-    st.markdown("<div class='overlay'>", unsafe_allow_html=True)
-
-    st.markdown("<h1>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)
-    st.markdown("<h3>Machine Learning Engineer | Data Scientist</h3>", unsafe_allow_html=True)
-
-    st.markdown(
-        "<p>Passionate about building scalable, ethical, and impactful AI systems for real-world problems.</p>",
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        "<p class='quote'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
-        unsafe_allow_html=True
-    )
-
     st.markdown(
         """
-        <div class='contact-links'>
-            📁 <a href='https://github.com/naib1999/my-projects' target='_blank'>GitHub</a> |
-            📧 <a href='mailto:naibalthaf@gmail.com'>Email</a> |
-            📞 9704077035
+        <div class="split-container">
+            <div class="left-content">
+                <h1>👋 Naib Mohammad Althaf</h1>
+                <h3>Machine Learning Engineer | Data Scientist</h3>
+                <p>
+                    Passionate about building scalable, ethical, and impactful AI systems for real-world problems.
+                </p>
+                <p style='font-style: italic;'>“The best way to predict the future is to invent it.” – Alan Kay</p>
+                <div class="contact-links">
+                    📁 <a href="https://github.com/naib1999/my-projects" target="_blank">GitHub</a>
+                    📧 <a href="mailto:naibalthaf@gmail.com">Email</a>
+                    📞 9704077035
+                </div>
+            </div>
+            <div class="right-content">
+                <img src="https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0" alt="AI Brain">
+            </div>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    st.markdown("</div>", unsafe_allow_html=True)
 
 
 

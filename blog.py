@@ -23,8 +23,8 @@ if selected == "Home":
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            padding: 2rem;
+            min-height: 90vh;
+            padding: 0 4rem;
             box-sizing: border-box;
         }
 
@@ -32,6 +32,10 @@ if selected == "Home":
             flex: 1;
             padding: 2rem;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
         }
 
         .right-content {
@@ -63,6 +67,7 @@ if selected == "Home":
         p {
             font-size: 1.1rem;
             line-height: 1.6;
+            margin: 0 0 1rem 0;
         }
 
         .contact-links a {

@@ -15,33 +15,56 @@ with st.sidebar:
     selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
 if selected == "Home":
-    # --- Background CSS and overlay styling ---
+    # --- Custom CSS for background and layout ---
     st.markdown(
         """
         <style>
         .stApp {
-            background-image: url("https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-image: url("https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0");
             background-size: cover;
-            background-position: center;
+            background-position: right center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Segoe UI', sans-serif;
         }
         .overlay {
             background-color: rgba(0, 0, 0, 0.65);
-            padding: 2.5rem;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            border-radius: 15px;
+            padding: 3rem 4rem;
+            margin: 80px auto;
+            border-radius: 20px;
+            max-width: 850px;
         }
-        h1, h3, p {
-            color: #f0f0f0 !important;
+        h1 {
+            font-size: 3rem;
+            color: #fff !important;
+            font-weight: 800;
         }
-        a {
+        h3 {
+            font-size: 1.5rem;
+            color: #ddd !important;
+            font-weight: 400;
+        }
+        p {
+            color: #eee !important;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .quote {
+            font-style: italic;
+            color: #c0c0c0 !important;
+            margin-top: 1rem;
+        }
+        .contact-links {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+        .contact-links a {
             color: #ffd700 !important;
+            font-weight: bold;
             text-decoration: none;
+            margin: 0 8px;
         }
-        a:hover {
+        .contact-links a:hover {
             text-decoration: underline;
         }
         </style>
@@ -49,7 +72,7 @@ if selected == "Home":
         unsafe_allow_html=True
     )
 
-    # --- Home page content ---
+    # --- Content Layout ---
     st.markdown("<div class='overlay'>", unsafe_allow_html=True)
 
     st.markdown("<h1>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)
@@ -61,17 +84,23 @@ if selected == "Home":
     )
 
     st.markdown(
-        "<p style='font-style: italic;'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
+        "<p class='quote'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
         unsafe_allow_html=True
     )
 
     st.markdown(
-        "<p>📂 <a href='https://github.com/naib1999/my-projects'>GitHub</a> &nbsp;|&nbsp; ✉️ <a href='mailto:naibalthaf@gmail.com'>Email</a> &nbsp;|&nbsp; 📞 9704077035</p>",
+        """
+        <div class='contact-links'>
+            📁 <a href='https://github.com/naib1999/my-projects' target='_blank'>GitHub</a> |
+            📧 <a href='mailto:naibalthaf@gmail.com'>Email</a> |
+            📞 9704077035
+        </div>
+        """,
         unsafe_allow_html=True
     )
 
     st.markdown("</div>", unsafe_allow_html=True)
-    st.markdown("---")
+
 
 
 

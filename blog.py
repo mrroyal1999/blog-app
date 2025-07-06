@@ -15,47 +15,65 @@ with st.sidebar:
     selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
 if selected == "Home":
-    # Background image via custom CSS
+    # --- Background CSS and overlay styling ---
     st.markdown(
         """
         <style>
         .stApp {
-            background-image: url("https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-image: url("https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            font-family: 'Segoe UI', sans-serif;
         }
         .overlay {
-            background-color: rgba(0,0,0,0.6);
-            padding: 2rem;
-            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 2.5rem;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 15px;
+        }
+        h1, h3, p {
+            color: #f0f0f0 !important;
+        }
+        a {
+            color: #ffd700 !important;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
 
+    # --- Home page content ---
     st.markdown("<div class='overlay'>", unsafe_allow_html=True)
-    st.markdown("<h1 style='color:white;'>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='color:white;'>Machine Learning Engineer | Data Scientist</h3>", unsafe_allow_html=True)
-    
+
+    st.markdown("<h1>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)
+    st.markdown("<h3>Machine Learning Engineer | Data Scientist</h3>", unsafe_allow_html=True)
+
     st.markdown(
-        "<p style='color:white;'>Passionate about building scalable, ethical, and impactful AI systems for real-world problems.</p>",
-        unsafe_allow_html=True
-    )
-    
-    st.markdown(
-        "<p style='color:white; font-style: italic;'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
+        "<p>Passionate about building scalable, ethical, and impactful AI systems for real-world problems.</p>",
         unsafe_allow_html=True
     )
 
     st.markdown(
-        "<p style='color:white;'>📂 <a href='https://github.com/naib1999/my-projects' style='color:white;'>GitHub</a> | ✉️ <a href='mailto:naibalthaf@gmail.com' style='color:white;'>Email</a> | 📞 9704077035</p>",
+        "<p style='font-style: italic;'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
         unsafe_allow_html=True
     )
+
+    st.markdown(
+        "<p>📂 <a href='https://github.com/naib1999/my-projects'>GitHub</a> &nbsp;|&nbsp; ✉️ <a href='mailto:naibalthaf@gmail.com'>Email</a> &nbsp;|&nbsp; 📞 9704077035</p>",
+        unsafe_allow_html=True
+    )
+
     st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("---")
+
+
 
 
 # --- About Me ---

@@ -23,19 +23,18 @@ if selected == "Home":
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            min-height: 90vh;
-            padding: 0 4rem;
+            min-height: 95vh;
+            padding: 3rem 4rem;
             box-sizing: border-box;
+            gap: 3rem;
         }
 
         .left-content {
-            flex: 1;
-            padding: 2rem;
-            color: white;
+            flex: 1.1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
+            color: white;
         }
 
         .right-content {
@@ -46,28 +45,29 @@ if selected == "Home":
         }
 
         .right-content img {
-            max-width: 90%;
+            width: 100%;
+            max-width: 500px;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 800;
+            font-size: 3.5rem;
+            font-weight: 900;
             margin-bottom: 0.5rem;
         }
 
         h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
         }
 
         p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
 
         .contact-links a {
@@ -75,6 +75,7 @@ if selected == "Home":
             text-decoration: none;
             font-weight: bold;
             margin-right: 1rem;
+            font-size: 1.1rem;
         }
 
         .contact-links a:hover {
@@ -83,6 +84,17 @@ if selected == "Home":
 
         body {
             background-color: #0a0a0a;
+        }
+
+        @media screen and (max-width: 768px) {
+            .split-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            .right-content {
+                margin-top: 2rem;
+            }
         }
         </style>
         """,

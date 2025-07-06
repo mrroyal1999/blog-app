@@ -14,19 +14,49 @@ with open("malthaf resume.pdf", "rb") as pdf_file:
 with st.sidebar:
     selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
-# --- Home ---
 if selected == "Home":
-    st.title("👋 Naib Mohammad Althaf")
-    st.subheader("Machine Learning Engineer | Data Scientist")
+    # Background image via custom CSS
     st.markdown(
         """
-        Passionate about building scalable, ethical, and impactful AI systems for real-world problems.
-        
-        [GitHub](https://github.com/naib1999/my-projects) | [Email](mailto:naibalthaf@gmail.com) | 📞 9704077035
-        """
+        <style>
+        .stApp {
+            background-image: url("https://images.unsplash.com/photo-1581091012184-7ab8a4fba26d");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(0,0,0,0.6);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
     )
-    st.image("https://unsplash.com/photos/ai-artificial-intelligence-concept3d-renderingconceptual-image-sv9G6e2OrZM", caption="AI & Innovation")
+
+    st.markdown("<div class='overlay'>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color:white;'>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:white;'>Machine Learning Engineer | Data Scientist</h3>", unsafe_allow_html=True)
+    
+    st.markdown(
+        "<p style='color:white;'>Passionate about building scalable, ethical, and impactful AI systems for real-world problems.</p>",
+        unsafe_allow_html=True
+    )
+    
+    st.markdown(
+        "<p style='color:white; font-style: italic;'>“The best way to predict the future is to invent it.” – Alan Kay</p>",
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        "<p style='color:white;'>📂 <a href='https://github.com/naib1999/my-projects' style='color:white;'>GitHub</a> | ✉️ <a href='mailto:naibalthaf@gmail.com' style='color:white;'>Email</a> | 📞 9704077035</p>",
+        unsafe_allow_html=True
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
     st.markdown("---")
+
 
 # --- About Me ---
 elif selected == "About Me":

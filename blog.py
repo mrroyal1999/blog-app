@@ -18,23 +18,29 @@ if selected == "Home":
     st.markdown(
         """
         <style>
+        html, body, .stApp {
+            height: 100%;
+            background-color: #0a0a0a;
+        }
+
         .split-container {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 95vh;
-            padding: 3rem 4rem;
+            height: 100vh; /* Full viewport height */
+            padding: 2rem 4rem;
             box-sizing: border-box;
-            gap: 3rem;
         }
 
         .left-content {
             flex: 1.1;
+            color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: white;
+            height: 100%;
+            padding-right: 2rem;
         }
 
         .right-content {
@@ -42,32 +48,37 @@ if selected == "Home":
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100%;
         }
 
         .right-content img {
-            width: 100%;
             max-width: 500px;
+            width: 100%;
             height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+            border-radius: 12px;
+            box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
         }
 
         h1 {
             font-size: 3.5rem;
-            font-weight: 900;
+            font-weight: 800;
             margin-bottom: 0.5rem;
         }
 
         h3 {
-            font-size: 1.75rem;
+            font-size: 1.7rem;
             font-weight: 500;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         p {
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            margin-top: 1.2rem;
         }
 
         .contact-links a {
@@ -82,16 +93,14 @@ if selected == "Home":
             text-decoration: underline;
         }
 
-        body {
-            background-color: #0a0a0a;
-        }
-
         @media screen and (max-width: 768px) {
             .split-container {
                 flex-direction: column;
                 text-align: center;
+                height: auto;
                 padding: 2rem;
             }
+
             .right-content {
                 margin-top: 2rem;
             }
@@ -124,6 +133,7 @@ if selected == "Home":
         """,
         unsafe_allow_html=True
     )
+
 
 
 

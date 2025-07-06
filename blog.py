@@ -15,18 +15,26 @@ with st.sidebar:
     selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
 
 if selected == "Home":
-    # --- Custom CSS for background and layout ---
+    # --- Background, top bar fix, layout ---
     st.markdown(
         """
         <style>
+        /* Push image right for better text visibility */
         .stApp {
             background-image: url("https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0");
             background-size: cover;
-            background-position: right center;
+            background-position: 80% center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Segoe UI', sans-serif;
         }
+
+        /* Remove top black box or shadow */
+        header, footer, .css-18ni7ap.e8zbici2 {
+            visibility: hidden;
+        }
+
+        /* Overlay for readable text */
         .overlay {
             background-color: rgba(0, 0, 0, 0.65);
             padding: 3rem 4rem;
@@ -34,6 +42,7 @@ if selected == "Home":
             border-radius: 20px;
             max-width: 850px;
         }
+
         h1 {
             font-size: 3rem;
             color: #fff !important;
@@ -72,7 +81,7 @@ if selected == "Home":
         unsafe_allow_html=True
     )
 
-    # --- Content Layout ---
+    # --- Home Page Content ---
     st.markdown("<div class='overlay'>", unsafe_allow_html=True)
 
     st.markdown("<h1>👋 Naib Mohammad Althaf</h1>", unsafe_allow_html=True)

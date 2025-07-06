@@ -24,13 +24,15 @@ if selected == "Home":
         }
 
         .split-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
-            padding: 2rem 4rem;
-            box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;  /* <== Moves content up */
+        padding: 2rem 4rem 1rem 4rem;  /* top-right-bottom-left */
+        height: 100vh;
+        box-sizing: border-box;
+      
+
         }
 
         .left-content {

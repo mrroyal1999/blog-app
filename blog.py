@@ -145,43 +145,62 @@ if selected == "Home":
 
 
 elif selected == "About Me":
-    # --- Stylish background and layout for About Me ---
+    # --- Styling and centered layout ---
     st.markdown(
         """
         <style>
+        html, body, .stApp {
+            height: 100%;
+        }
+
+        .about-wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            background: linear-gradient(to right, #141e30, #243b55);
+            box-sizing: border-box;
+        }
+
         .about-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
             padding: 3rem;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-            border-radius: 15px;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            max-width: 1100px;
+            width: 100%;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
         }
 
         .about-text {
             flex: 2;
             padding-right: 2rem;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            line-height: 1.75;
+        }
+
+        .about-text h2 {
+            color: #00e6e6;
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .about-image {
             flex: 1;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .about-image img {
-            width: 200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-        }
-
-        .about-container h2 {
-            color: #00e6e6;
+            width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
         }
 
         @media screen and (max-width: 768px) {
@@ -192,37 +211,41 @@ elif selected == "About Me":
             .about-text {
                 padding-right: 0;
             }
+            .about-image {
+                margin-top: 2rem;
+            }
         }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # --- About Me Content ---
+    # --- HTML Layout ---
     st.markdown(
         """
-        <div class="about-container">
-            <div class="about-text">
-                <h2>🙋‍♂️ About Me</h2>
-                <p>
-                    I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains.
-                    With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
-                </p>
-                <p>
-                    Currently working at <strong>Tata Consultancy Services</strong>, I’ve built chatbots using <strong>RAG pipelines</strong>, improved workflows, and developed tools 
-                    that reduced hours of manual effort. My interest lies in <strong>Natural Language Processing</strong>, <strong>Explainable AI</strong>, and bridging ML systems 
-                    with real business needs.
-                </p>
-            </div>
-            <div class="about-image">
-                <img src="IMG_0042s.jpg" alt="Profile Image">
+        <div class="about-wrapper">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>🙋‍♂️ About Me</h2>
+                    <p>
+                        I am a Data Scientist with over 3 years of experience designing and deploying machine learning solutions across various domains.
+                        With a background in mechanical engineering and a Master’s in Data Science, I’ve transformed my passion for AI into real-world impact.
+                    </p>
+                    <p>
+                        Currently working at <strong>Tata Consultancy Services</strong>, I’ve built chatbots using <strong>RAG pipelines</strong>, improved workflows, and developed tools 
+                        that reduced hours of manual effort. My interest lies in <strong>Natural Language Processing</strong>, <strong>Explainable AI</strong>, and bridging ML systems 
+                        with real business needs.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://raw.githubusercontent.com/naib1999/blog-app/main/IMG_0042s.jpg" alt="Profile Image">
+                </div>
             </div>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    st.markdown("---")
 
 
 # --- Projects ---

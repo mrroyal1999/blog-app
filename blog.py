@@ -1,4 +1,3 @@
-
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
@@ -12,7 +11,13 @@ with open("malthaf resume.pdf", "rb") as pdf_file:
 
 # --- Sidebar Navigation ---
 with st.sidebar:
-    selected =option_menu(menu_title="Main Menu",options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],menu_icon="cast",default_index=0)
+    selected = option_menu(
+        menu_title="Main Menu",
+        options=["Home", "About Me", "Projects", "Skills", "Resume", "Contact"],
+        icons=["house", "person", "briefcase", "tools", "file-earmark-person", "envelope"],
+        menu_icon="cast",
+        default_index=0,
+    )
 
 if selected == "Home":
     st.markdown(
@@ -22,21 +27,15 @@ if selected == "Home":
             height: 100%;
             background-color: #0a0a0a;
         }
-
         .split-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;      /* keep content up */
-        padding: 3rem 4rem 2rem 4rem; /* top right bottom left */
-        min-height: calc(100vh - 4rem); /* account for top Streamlit padding */
-        box-sizing: border-box;
-
-
-      
-
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3rem 4rem 2rem 4rem;
+            min-height: calc(100vh - 4rem);
+            box-sizing: border-box;
         }
-
         .left-content {
             flex: 1.1;
             color: white;
@@ -46,7 +45,6 @@ if selected == "Home":
             height: 100%;
             padding-right: 2rem;
         }
-
         .right-content {
             flex: 1;
             display: flex;
@@ -54,7 +52,6 @@ if selected == "Home":
             align-items: center;
             height: 100%;
         }
-
         .right-content img {
             max-width: 500px;
             width: 100%;
@@ -62,29 +59,24 @@ if selected == "Home":
             border-radius: 12px;
             box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
         }
-
         h1 {
             font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
         }
-
         h3 {
             font-size: 1.7rem;
             font-weight: 500;
             margin-bottom: 1.2rem;
         }
-
         p {
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 1rem;
         }
-
         .contact-links {
             margin-top: 1.2rem;
         }
-
         .contact-links a {
             color: #ffd700;
             text-decoration: none;
@@ -92,11 +84,9 @@ if selected == "Home":
             margin-right: 1rem;
             font-size: 1.1rem;
         }
-
         .contact-links a:hover {
             text-decoration: underline;
         }
-
         @media screen and (max-width: 768px) {
             .split-container {
                 flex-direction: column;
@@ -104,7 +94,6 @@ if selected == "Home":
                 height: auto;
                 padding: 2rem;
             }
-
             .right-content {
                 margin-top: 2rem;
             }
@@ -138,21 +127,13 @@ if selected == "Home":
         unsafe_allow_html=True
     )
 
-
-
-
-
-
-
 elif selected == "About Me":
-    # --- Full-height layout, wider text, no image ---
     st.markdown(
         """
         <style>
         html, body, .stApp {
             height: 100%;
         }
-
         .about-wrapper {
             height: 100vh;
             display: flex;
@@ -162,7 +143,6 @@ elif selected == "About Me":
             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             box-sizing: border-box;
         }
-
         .about-container {
             max-width: 1000px;
             width: 100%;
@@ -172,32 +152,26 @@ elif selected == "About Me":
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
             color: #f0f0f0;
         }
-
         .about-container h2 {
             color: #00e6e6;
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
         }
-
         .about-container p {
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 1rem;
         }
-
         @media screen and (max-width: 768px) {
             .about-wrapper {
                 padding: 2rem 1rem;
             }
-
             .about-container {
                 padding: 2rem;
             }
-
             .about-container h2 {
                 font-size: 1.8rem;
             }
-
             .about-container p {
                 font-size: 1.1rem;
             }
@@ -207,7 +181,6 @@ elif selected == "About Me":
         unsafe_allow_html=True
     )
 
-    # --- Text Content Layout ---
     st.markdown(
         """
         <div class="about-wrapper">
@@ -228,17 +201,15 @@ elif selected == "About Me":
         unsafe_allow_html=True
     )
 
-
-
-# --- Projects ---
 elif selected == "Projects":
     st.header("🚀 Featured Projects")
-
     st.markdown("""
     <style>
     .project-section {
         display: flex;
         overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 1rem;
         padding: 1rem 0;
         scroll-behavior: smooth;
     }
@@ -274,17 +245,17 @@ elif selected == "Projects":
         border-radius: 10px;
     }
     </style>
-
     <div class="project-section">
         <div class="project-card">
+            <img src="https://your-image-url.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
             <div class="project-title">🔧 RAG-Based AI Chatbot for Designers</div>
             <div class="project-desc">
                 - Built internal RAG chatbot to assist UI/UX designers.<br>
                 - Integrated with Azure Databricks for scalability.<br>
-                - Improved knowledge retrieval efficiency.
+                - Improved knowledge retrieval efficiency.<br>
+                <a href="https://github.com/your-link" target="_blank" style="color:#00e6e6;font-weight:bold;">🔗 View Project</a>
             </div>
         </div>
-
         <div class="project-card">
             <div class="project-title">📊 Sentiment Analysis of Renewable Tweets</div>
             <div class="project-desc">
@@ -293,7 +264,6 @@ elif selected == "Projects":
                 - Leveraged deep learning for robust predictions.
             </div>
         </div>
-
         <div class="project-card">
             <div class="project-title">🤖 Chatbot Feedback Summarizer</div>
             <div class="project-desc">
@@ -305,9 +275,6 @@ elif selected == "Projects":
     </div>
     """, unsafe_allow_html=True)
 
-
-
-# --- Skills ---
 elif selected == "Skills":
     st.header("🛠️ Skills & Technologies")
     skill_groups = {
@@ -323,25 +290,22 @@ elif selected == "Skills":
         st.markdown(", ".join(f"`{skill}`" for skill in skills))
     st.markdown("---")
 
-# --- Resume ---
 elif selected == "Resume":
     st.header("📄 Resume")
     st.download_button(
         label="⬇️ Download My Resume",
         data=PDFbyte,
         file_name="Naib_Althaf_Resume.pdf",
-        mime='application/octet-stream',
+        mime='application/pdf',
     )
     st.markdown("---")
 
-# --- Contact ---
 elif selected == "Contact":
     st.header("📬 Contact Me")
     st.write("Feel free to reach out via email or connect on GitHub!")
     st.write("**Email:** naibalthaf@gmail.com")
     st.write("**Phone:** 9704077035")
     st.write("**GitHub:** [github.com/naib1999/my-projects](https://github.com/naib1999/my-projects)")
-
     with st.form("contact_form"):
         name = st.text_input("Your Name")
         message = st.text_area("Message")

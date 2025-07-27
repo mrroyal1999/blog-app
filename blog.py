@@ -233,25 +233,79 @@ elif selected == "About Me":
 # --- Projects ---
 elif selected == "Projects":
     st.header("🚀 Featured Projects")
-    project_cols = st.columns(2)
 
-    with project_cols[0]:
-        st.subheader("🔧 RAG-Based AI Chatbot for Designers")
-        st.write("""
-        - Developed and deployed an internal chatbot using Retrieval-Augmented Generation (RAG).
-        - Reduced search time for designers and improved access to knowledge.
-        - Scalable deployment using Azure Databricks.
-        """)
+    st.markdown("""
+    <style>
+    .project-section {
+        display: flex;
+        overflow-x: auto;
+        padding: 1rem 0;
+        scroll-behavior: smooth;
+    }
+    .project-card {
+        min-width: 300px;
+        max-width: 350px;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+        margin-right: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,255,255,0.3);
+        transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0,255,255,0.5);
+    }
+    .project-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .project-desc {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    ::-webkit-scrollbar {
+        height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #00e6e6;
+        border-radius: 10px;
+    }
+    </style>
 
-    with project_cols[1]:
-        st.subheader("📊 Sentiment Analysis for Renewable Energy Tweets")
-        st.write("""
-        - NLP model classifies tweets into positive, negative, and neutral.
-        - Helped stakeholders analyze public opinion on renewable trends.
-        - Used deep learning for improved performance.
-        """)
+    <div class="project-section">
+        <div class="project-card">
+            <div class="project-title">🔧 RAG-Based AI Chatbot for Designers</div>
+            <div class="project-desc">
+                - Built internal RAG chatbot to assist UI/UX designers.<br>
+                - Integrated with Azure Databricks for scalability.<br>
+                - Improved knowledge retrieval efficiency.
+            </div>
+        </div>
 
-    st.markdown("---")
+        <div class="project-card">
+            <div class="project-title">📊 Sentiment Analysis of Renewable Tweets</div>
+            <div class="project-desc">
+                - Trained NLP model for classifying renewable energy tweets.<br>
+                - Helped stakeholders understand public sentiment.<br>
+                - Leveraged deep learning for robust predictions.
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">🤖 Chatbot Feedback Summarizer</div>
+            <div class="project-desc">
+                - Created tool to summarize customer chatbot feedback using LLMs.<br>
+                - Enabled product teams to extract key complaints easily.<br>
+                - Integrated with internal dashboards.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
 
 # --- Skills ---
 elif selected == "Skills":
